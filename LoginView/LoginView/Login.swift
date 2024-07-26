@@ -7,9 +7,47 @@
 
 import SwiftUI
 
+extension Color {
+    static let customBackground = Color(UIColor(red: 247/255, green: 248/255, blue: 250/255, alpha: 1.0))
+}
+
 struct Login: View {
+    @State private var email: String = ""
+    @State private var password: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color.customBackground.edgesIgnoringSafeArea(.all)
+            
+            Spacer()
+            
+            VStack (alignment: .leading, spacing: 20) {
+                Text("Welcome Back!")
+                    .font(.largeTitle)
+                    .foregroundColor(.black)
+                    
+                
+                Text("Lorem ipsum dolor sit amet, consectetur " + "\n" + "adipising elist sed do eiusmod tempor")
+                    .padding(.bottom, 20)
+                    
+                
+                TextField("Email", text: $email)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 1)
+                    .border(Color.customBackground)
+                
+                SecureField("Password", text: $password)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(5.0)
+                    .padding(.bottom, 20)
+            }
+            .padding()
+            
+            Spacer()
+        }
     }
 }
 
