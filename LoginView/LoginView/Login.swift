@@ -24,10 +24,10 @@ struct Login: View {
                     Text("Welcome Back!")
                         .font(.largeTitle)
                         .foregroundColor(.black)
-                    
+                        .padding(.bottom, 5)
                     
                     Text("Lorem ipsum dolor sit amet, consectetur " + "\n" + "adipising elist sed do eiusmod tempor")
-                        .padding(.bottom, 20)
+                    .padding(.bottom, 20)
                 
                     VStack (spacing: 20){
                         HStack {
@@ -49,7 +49,7 @@ struct Login: View {
                         .background(Color.white)
                         .cornerRadius(10.0)
                     }
-                    .padding(.bottom, 300)
+                    .padding(.bottom, 340)
                 }
                 .padding()
             
@@ -61,7 +61,7 @@ struct Login: View {
                         .padding(.trailing, 20)
                 }
             }
-            .padding(.top, 180)
+            .padding(.top, 125)
             
             Button {
                 print("로그인 버튼 클릭")
@@ -73,7 +73,7 @@ struct Login: View {
                     .cornerRadius(5.0)
                     .padding(.top, 480)
             }
-            .padding(.bottom, 175) // 하단 여백 추가
+            .padding(.bottom, 240) // 하단 여백 추가
                          
         }
     }
