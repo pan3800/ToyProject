@@ -19,33 +19,62 @@ struct Login: View {
         ZStack {
             Color.customBackground.edgesIgnoringSafeArea(.all)
             
+                VStack (alignment: .leading, spacing: 20) {
+                    Text("Welcome Back!")
+                        .font(.largeTitle)
+                        .foregroundColor(.black)
+                    
+                    
+                    Text("Lorem ipsum dolor sit amet, consectetur " + "\n" + "adipising elist sed do eiusmod tempor")
+                        .padding(.bottom, 20)
+                    
+                    VStack {
+                        HStack {
+                            Image(systemName: "person.fill")
+                                .foregroundColor(.secondary)
+                            
+                            TextField("email", text: $email)
+                                .disableAutocorrection(true)
+                        }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10.0)
+                        
+                        HStack {
+                            SecureField("Password", text: $password)
+                            Image(systemName: "eye")
+                        }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10.0)
+                    }
+                }
+                .padding()
+            
+            VStack {
+                
+                HStack {
+                    Spacer()
+                    Text("Forgot yout password?")
+                        .padding(.trailing, 20)
+                }
+            }
+            .padding(.top, 320)
+            
             Spacer()
             
-            VStack (alignment: .leading, spacing: 20) {
-                Text("Welcome Back!")
-                    .font(.largeTitle)
-                    .foregroundColor(.black)
-                    
-                
-                Text("Lorem ipsum dolor sit amet, consectetur " + "\n" + "adipising elist sed do eiusmod tempor")
-                    .padding(.bottom, 20)
-                    
-                
-                TextField("Email", text: $email)
-                    .padding()
-                    .background(Color.white)
+            Button {
+                print("로그인 버튼 클릭")
+            } label: {
+                Text("Login")
+                    .foregroundColor(.white)
+                    .frame(width: 350, height: 50)
+                    .background(Color.green)
                     .cornerRadius(5.0)
-                    .padding(.bottom, 1)
-                    .border(Color.customBackground)
-                
-                SecureField("Password", text: $password)
-                    .padding()
-                    .background(Color.white)
-                    .cornerRadius(5.0)
-                    .padding(.bottom, 20)
+                    .padding(.top, 480)
             }
-            .padding()
-            
+            .padding(.bottom, 30) // 하단 여백 추가
+                         
             Spacer()
         }
     }
