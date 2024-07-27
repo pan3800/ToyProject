@@ -19,7 +19,8 @@ struct Login: View {
         ZStack {
             Color.customBackground.edgesIgnoringSafeArea(.all)
             
-                VStack (alignment: .leading, spacing: 20) {
+            VStack (alignment: .leading) {
+                    Spacer()
                     Text("Welcome Back!")
                         .font(.largeTitle)
                         .foregroundColor(.black)
@@ -27,8 +28,8 @@ struct Login: View {
                     
                     Text("Lorem ipsum dolor sit amet, consectetur " + "\n" + "adipising elist sed do eiusmod tempor")
                         .padding(.bottom, 20)
-                    
-                    VStack {
+                
+                    VStack (spacing: 20){
                         HStack {
                             Image(systemName: "person.fill")
                                 .foregroundColor(.secondary)
@@ -48,6 +49,7 @@ struct Login: View {
                         .background(Color.white)
                         .cornerRadius(10.0)
                     }
+                    .padding(.bottom, 300)
                 }
                 .padding()
             
@@ -59,9 +61,7 @@ struct Login: View {
                         .padding(.trailing, 20)
                 }
             }
-            .padding(.top, 320)
-            
-            Spacer()
+            .padding(.top, 180)
             
             Button {
                 print("로그인 버튼 클릭")
@@ -73,9 +73,8 @@ struct Login: View {
                     .cornerRadius(5.0)
                     .padding(.top, 480)
             }
-            .padding(.bottom, 30) // 하단 여백 추가
+            .padding(.bottom, 175) // 하단 여백 추가
                          
-            Spacer()
         }
     }
 }
