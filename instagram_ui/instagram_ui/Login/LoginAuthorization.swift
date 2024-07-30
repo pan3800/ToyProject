@@ -50,9 +50,29 @@ struct LoginAuthorization: View {
                     }
                         
                     Spacer()
+                    
+                    FooterView()
                 }
             }
         }
+    }
+}
+
+struct FooterView: View {
+    var body: some View {
+        HStack {
+            Spacer()
+            Text("Don't have an account?")
+                .foregroundColor(.gray)
+                .padding(.top, 10)
+                .padding(.bottom, 10)
+            Text("Sign up")
+                .foregroundColor(.black)
+                .padding(.top, 10)
+                .padding(.bottom, 10)
+            Spacer()
+        }
+        .background(Color.white)
     }
 }
 
