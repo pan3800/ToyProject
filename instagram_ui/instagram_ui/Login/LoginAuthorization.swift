@@ -32,8 +32,8 @@ struct LoginAuthorization: View {
                         .foregroundColor(Color.black)
                         .fontWeight(.bold)
                     
-                    Button {
-                        print("버튼 클릭")
+                    NavigationLink {
+                        InstagramLoginView()
                     } label: {
                         Text("Log in")
                             .foregroundStyle(.white)
