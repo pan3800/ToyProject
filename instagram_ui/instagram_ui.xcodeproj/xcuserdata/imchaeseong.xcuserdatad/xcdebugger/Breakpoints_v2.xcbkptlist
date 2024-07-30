@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C3ACDAEA-27CB-4CF9-A34F-E0BD9EF5ACE2"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13880727-6BFA-4322-8B8B-3A3A5DF047DC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "instagram_ui/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "13880727-6BFA-4322-8B8B-3A3A5DF047DC - 8d03c2af8c3a788c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "instagram_ui.ContentView.body.getter : some"
+                  moduleName = "instagram_ui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imchaeseong/Documents/starbucks_ui/instagram_ui/instagram_ui/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "13880727-6BFA-4322-8B8B-3A3A5DF047DC - 8d03c2af8c3a78ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "instagram_ui.ContentView.body.getter : some"
+                  moduleName = "instagram_ui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imchaeseong/Documents/starbucks_ui/instagram_ui/instagram_ui/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isLaunching = false
     var body: some View {
-       LoginAuthorization()
+        VStack {
+            if isLaunching {
+                LoginAuthorization()
+            } else {
+                SplashView()
+            }
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                withAnimation {
+                    isLaunching = true
+                }
+            }
+        }
+       
     }
 }
 
