@@ -22,6 +22,7 @@
 		1920B6982C5A1CE700D1C323 /* EnterNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920B6972C5A1CE700D1C323 /* EnterNameView.swift */; };
 		1920B69A2C5A1E3F00D1C323 /* EnterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920B6992C5A1E3F00D1C323 /* EnterPasswordView.swift */; };
 		1920B69C2C5A1FC000D1C323 /* EnterUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920B69B2C5A1FC000D1C323 /* EnterUsernameView.swift */; };
+		1920B69E2C5A214100D1C323 /* CompleteSingupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1920B69D2C5A214100D1C323 /* CompleteSingupView.swift */; };
 		19A5ADF02C58B0C0007499A3 /* InstagramLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A5ADEF2C58B0C0007499A3 /* InstagramLoginView.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		1920B6972C5A1CE700D1C323 /* EnterNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameView.swift; sourceTree = "<group>"; };
 		1920B6992C5A1E3F00D1C323 /* EnterPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordView.swift; sourceTree = "<group>"; };
 		1920B69B2C5A1FC000D1C323 /* EnterUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUsernameView.swift; sourceTree = "<group>"; };
+		1920B69D2C5A214100D1C323 /* CompleteSingupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSingupView.swift; sourceTree = "<group>"; };
 		19A5ADEF2C58B0C0007499A3 /* InstagramLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +159,7 @@
 				1920B6972C5A1CE700D1C323 /* EnterNameView.swift */,
 				1920B6992C5A1E3F00D1C323 /* EnterPasswordView.swift */,
 				1920B69B2C5A1FC000D1C323 /* EnterUsernameView.swift */,
+				1920B69D2C5A214100D1C323 /* CompleteSingupView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				1920B69A2C5A1E3F00D1C323 /* EnterPasswordView.swift in Sources */,
 				1909447D2C56296400DAADB0 /* ContentView.swift in Sources */,
 				1920B69C2C5A1FC000D1C323 /* EnterUsernameView.swift in Sources */,
+				1920B69E2C5A214100D1C323 /* CompleteSingupView.swift in Sources */,
 				1909447B2C56296400DAADB0 /* instagram_uiApp.swift in Sources */,
 				190DA1A82C59050E00EE9B42 /* SplashView.swift in Sources */,
 			);
