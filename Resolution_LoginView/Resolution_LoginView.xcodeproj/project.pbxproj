@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192FE8BD2C63462F0097292E /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192FE8BC2C63462F0097292E /* SheetView.swift */; };
 		193569272C6320A0004F04AA /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193569262C6320A0004F04AA /* TextFieldModifier.swift */; };
 		19A7F68D2C61C19400DF231E /* Resolution_LoginViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A7F68C2C61C19400DF231E /* Resolution_LoginViewApp.swift */; };
 		19A7F68F2C61C19400DF231E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A7F68E2C61C19400DF231E /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		192FE8BC2C63462F0097292E /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		193569262C6320A0004F04AA /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		19A7F6892C61C19400DF231E /* Resolution_LoginView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resolution_LoginView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19A7F68C2C61C19400DF231E /* Resolution_LoginViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolution_LoginViewApp.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				19A7F6B72C61C2AF00DF231E /* LoginView.swift */,
 				19A7F6B92C61C5C700DF231E /* LoginAuthView.swift */,
+				192FE8BC2C63462F0097292E /* SheetView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				193569272C6320A0004F04AA /* TextFieldModifier.swift in Sources */,
 				19A7F6B82C61C2AF00DF231E /* LoginView.swift in Sources */,
 				19A7F68F2C61C19400DF231E /* ContentView.swift in Sources */,
+				192FE8BD2C63462F0097292E /* SheetView.swift in Sources */,
 				19A7F68D2C61C19400DF231E /* Resolution_LoginViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
