@@ -8,21 +8,25 @@
 import SwiftUI
 
 struct LoginAuthView: View {
-    @Binding var isPresented: Bool
+    // @Binding var isPresented: Bool
+    @State private var password: String = ""
+    @State private var isPasswordVisible: Bool = false
+    
     var body: some View {
-       
+        
         NavigationStack {
             Button(action: {
-                    isPresented = false
-                }) {
-                    Image(systemName: "xmark")
-                        .resizable()
-                        .frame(width: 24, height: 24)
-                        .foregroundColor(.gray)
-                        .padding()
-                        .padding(.trailing, 340)
-                        .padding(.bottom, 10)
-                }
+                print("test")
+                //             isPresented = false
+            }) {
+                Image(systemName: "xmark")
+                    .resizable()
+                    .frame(width: 24, height: 24)
+                    .foregroundColor(.gray)
+                    .padding()
+                    .padding(.trailing, 340)
+                    .padding(.bottom, 10)
+            }
             
             Spacer()
             
@@ -47,15 +51,23 @@ struct LoginAuthView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
                     
-                    
-                    ZStack {
-                        SecureField("비밀번호", text: .constant(""))
-                            .modifier(TextFieldModifier())
-                        Spacer()
-                        Image(systemName: "eye")
-                            .padding(.leading, 300)
+                    HStack {
+                        if isPasswordVisible {
+                            TextField("Password", text: $password)
+                        } else {
+                            SecureField("Password", text: $password)
+                        }
                         
+                        Button(action: {
+                            isPasswordVisible.toggle()
+                        }) {
+                            Image(systemName: isPasswordVisible ? "eye.slash.circle.fill" : "eye.circle.fill")
+                                .foregroundColor(.gray)
+                        }
                     }
+                    .modifier(TextFieldModifier())
+                    
+                    
                     
                     HStack {
                         NavigationLink {
@@ -63,7 +75,7 @@ struct LoginAuthView: View {
                         } label: {
                             Text("아이디 찾기")
                         }
-
+                        
                         NavigationLink {
                             LoginView()
                         } label: {
@@ -80,4 +92,8 @@ struct LoginAuthView: View {
     }
 }
 
-
+struct LoginAuthView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginAuthView()
+    }
+}
