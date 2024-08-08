@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginAuthView: View {
-    @Binding var isPresented: Bool
+    //@Binding var isPresented: Bool
     @State private var password: String = ""
     @State private var isPasswordVisible: Bool = false
     
@@ -16,8 +16,8 @@ struct LoginAuthView: View {
         
         NavigationStack {
             Button(action: {
-                // print("test")
-                isPresented = false
+                 print("test")
+                //isPresented = false
             }) {
                 Image(systemName: "xmark")
                     .resizable()
@@ -83,6 +83,17 @@ struct LoginAuthView: View {
                     .padding(.leading, 180)
                     .padding(.top, 10)
                     
+                    Image("kakao_login_button")
+                        .resizable()
+                        .frame(width: 355, height: 60)
+                        .padding(.top, 35)
+                    
+                    Image("naver_login_button")
+                        .resizable()
+                        .frame(width: 355, height: 60)
+                        .padding(.top, 5)
+                        
+                    
                     Spacer()
                 }
             }
@@ -90,8 +101,8 @@ struct LoginAuthView: View {
     }
 }
 
-//struct LoginAuthView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LoginAuthView()
-//    }
-//}
+struct LoginAuthView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginAuthView()
+    }
+}
