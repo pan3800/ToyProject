@@ -85,16 +85,24 @@ struct LoginAuthView: View {
                     
                     Image("kakao_login_button")
                         .resizable()
-                        .frame(width: 355, height: 60)
+                        .frame(width: 363, height: 60)
                         .padding(.top, 35)
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
                     
                     Image("naver_login_button")
                         .resizable()
-                        .frame(width: 355, height: 60)
+                        .frame(width: 363, height: 60)
                         .padding(.top, 5)
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
                         
                     
                     Spacer()
+                    
+                    BlueButtonView {
+                        print("ee")
+                    } label: {
+                        Text("로그인")
+                    }
                 }
             }
         }
