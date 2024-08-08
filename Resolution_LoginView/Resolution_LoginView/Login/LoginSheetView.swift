@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginAuthView: View {
-    // @Binding var isPresented: Bool
+    @Binding var isPresented: Bool
     @State private var password: String = ""
     @State private var isPasswordVisible: Bool = false
     
@@ -16,8 +16,8 @@ struct LoginAuthView: View {
         
         NavigationStack {
             Button(action: {
-                print("test")
-                //             isPresented = false
+                // print("test")
+                isPresented = false
             }) {
                 Image(systemName: "xmark")
                     .resizable()
@@ -61,13 +61,11 @@ struct LoginAuthView: View {
                         Button(action: {
                             isPasswordVisible.toggle()
                         }) {
-                            Image(systemName: isPasswordVisible ? "eye.slash.circle.fill" : "eye.circle.fill")
+                            Image(systemName: isPasswordVisible ? "eye.circle.fill" : "eye.slash.circle.fill")
                                 .foregroundColor(.gray)
                         }
                     }
                     .modifier(TextFieldModifier())
-                    
-                    
                     
                     HStack {
                         NavigationLink {
@@ -92,8 +90,8 @@ struct LoginAuthView: View {
     }
 }
 
-struct LoginAuthView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginAuthView()
-    }
-}
+//struct LoginAuthView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginAuthView()
+//    }
+//}

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		193569272C6320A0004F04AA /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193569262C6320A0004F04AA /* TextFieldModifier.swift */; };
+		1951ED1F2C648D8B0052E583 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1951ED1E2C648D8B0052E583 /* MainTabView.swift */; };
 		19A7F68D2C61C19400DF231E /* Resolution_LoginViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A7F68C2C61C19400DF231E /* Resolution_LoginViewApp.swift */; };
 		19A7F68F2C61C19400DF231E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A7F68E2C61C19400DF231E /* ContentView.swift */; };
 		19A7F6912C61C19500DF231E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19A7F6902C61C19500DF231E /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		193569262C6320A0004F04AA /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
+		1951ED1E2C648D8B0052E583 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		19A7F6892C61C19400DF231E /* Resolution_LoginView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resolution_LoginView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19A7F68C2C61C19400DF231E /* Resolution_LoginViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resolution_LoginViewApp.swift; sourceTree = "<group>"; };
 		19A7F68E2C61C19400DF231E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				19A7F6B62C61C27B00DF231E /* Login */,
 				19A7F68C2C61C19400DF231E /* Resolution_LoginViewApp.swift */,
 				19A7F68E2C61C19400DF231E /* ContentView.swift */,
+				1951ED1E2C648D8B0052E583 /* MainTabView.swift */,
 				19A7F6902C61C19500DF231E /* Assets.xcassets */,
 				19A7F6922C61C19500DF231E /* Preview Content */,
 			);
@@ -287,6 +290,7 @@
 				19A7F6B82C61C2AF00DF231E /* LoginView.swift in Sources */,
 				19A7F68F2C61C19400DF231E /* ContentView.swift in Sources */,
 				19A7F68D2C61C19400DF231E /* Resolution_LoginViewApp.swift in Sources */,
+				1951ED1F2C648D8B0052E583 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

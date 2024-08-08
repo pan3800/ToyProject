@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    // @State var isShowingSheet = false
+    @State var isShowingSheet = false
     
     var body: some View {
         NavigationStack {
@@ -23,8 +23,8 @@ struct LoginView: View {
                     .fontWeight(.light)
                 
                 Button {
-                    print("test")
-                   //  isShowingSheet.toggle()
+                //print("test")
+                   isShowingSheet.toggle()
                 } label: {
                     Text("로그인하기")
                         .foregroundStyle(.white)
@@ -33,9 +33,9 @@ struct LoginView: View {
                         .background(.blue)
                         .clipShape(RoundedRectangle(cornerRadius: 5))
                 }
-//                .sheet(isPresented: isShowingSheet) {
-//                    // LoginAuthView(isPresented: $isShowingSheet)
-//                }
+                .sheet(isPresented: $isShowingSheet) {
+                    LoginAuthView(isPresented: $isShowingSheet)
+                }
                 
                 Spacer()
             }
