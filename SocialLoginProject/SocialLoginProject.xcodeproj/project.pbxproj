@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19788FE52C65ED9F00B7A634 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19788FE42C65ED9F00B7A634 /* LoginView.swift */; };
 		197FAC6D2C64BD190001B7F6 /* SocialLoginProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197FAC6C2C64BD190001B7F6 /* SocialLoginProjectApp.swift */; };
 		197FAC6F2C64BD190001B7F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197FAC6E2C64BD190001B7F6 /* ContentView.swift */; };
 		197FAC712C64BD1A0001B7F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 197FAC702C64BD1A0001B7F6 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		197FAC9D2C64BFAF0001B7F6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 197FAC9C2C64BFAF0001B7F6 /* FirebaseFirestore */; };
 		197FAC9F2C64BFAF0001B7F6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 197FAC9E2C64BFAF0001B7F6 /* FirebaseFirestoreSwift */; };
 		197FACA12C64BFAF0001B7F6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 197FACA02C64BFAF0001B7F6 /* FirebaseStorage */; };
+		19B1A6992C65EC3000B6804C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B1A6982C65EC3000B6804C /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19788FE42C65ED9F00B7A634 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		197FAC692C64BD190001B7F6 /* SocialLoginProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialLoginProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		197FAC6C2C64BD190001B7F6 /* SocialLoginProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginProjectApp.swift; sourceTree = "<group>"; };
 		197FAC6E2C64BD190001B7F6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 		197FAC872C64BD1A0001B7F6 /* SocialLoginProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginProjectUITests.swift; sourceTree = "<group>"; };
 		197FAC892C64BD1A0001B7F6 /* SocialLoginProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		197FAC962C64BE200001B7F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19B1A6982C65EC3000B6804C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19788FE32C65ED9200B7A634 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				19788FE42C65ED9F00B7A634 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		197FAC602C64BD190001B7F6 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +116,8 @@
 		197FAC6B2C64BD190001B7F6 /* SocialLoginProject */ = {
 			isa = PBXGroup;
 			children = (
+				19788FE32C65ED9200B7A634 /* Login */,
+				19B1A6972C65EC0600B6804C /* SplashScreen */,
 				197FAC6C2C64BD190001B7F6 /* SocialLoginProjectApp.swift */,
 				197FAC6E2C64BD190001B7F6 /* ContentView.swift */,
 				197FAC702C64BD1A0001B7F6 /* Assets.xcassets */,
@@ -136,6 +150,14 @@
 				197FAC892C64BD1A0001B7F6 /* SocialLoginProjectUITestsLaunchTests.swift */,
 			);
 			path = SocialLoginProjectUITests;
+			sourceTree = "<group>";
+		};
+		19B1A6972C65EC0600B6804C /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				19B1A6982C65EC3000B6804C /* SplashView.swift */,
+			);
+			path = SplashScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +302,8 @@
 			files = (
 				197FAC6F2C64BD190001B7F6 /* ContentView.swift in Sources */,
 				197FAC6D2C64BD190001B7F6 /* SocialLoginProjectApp.swift in Sources */,
+				19788FE52C65ED9F00B7A634 /* LoginView.swift in Sources */,
+				19B1A6992C65EC3000B6804C /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
