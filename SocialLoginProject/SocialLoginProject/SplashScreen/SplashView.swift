@@ -14,7 +14,7 @@ struct SplashView: View {
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
                 .scaledToFill()
-                .frame(width: 130, height: 50)
+                .frame(width: 70, height: 50)
             
         }
     }
