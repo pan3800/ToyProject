@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct LoginView: View {
+    @State private var isShowingLoginSheet = false
     var body: some View {
         
-        NavigationStack {
+        VStack {
             
             Spacer()
             
@@ -18,7 +19,7 @@ struct LoginView: View {
                 .font(.system(size: 15))
             
             Button {
-                print("zz")
+                isShowingLoginSheet.toggle()
             } label: {
                 Text("로그인하기")
                     .fontWeight(.semibold)
@@ -29,6 +30,9 @@ struct LoginView: View {
             }
             
             Spacer()
+        }
+        .sheet(isPresented: $isShowingLoginSheet) {
+            LoginSheetView(isShowing: $isShowingLoginSheet)
         }
         
     }
