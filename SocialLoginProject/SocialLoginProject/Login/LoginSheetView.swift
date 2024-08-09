@@ -32,5 +32,6 @@ struct LoginSheetView: View {
                 }
             }
         }
+        .frame(height: 400)
     }
 }
