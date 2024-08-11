@@ -55,7 +55,6 @@ struct LoginView: View {
 //            LoginSheetView(isShowing: $isShowingLoginSheet)
 //                .presentationDetents([.medium, .large])
 //        }
-        
     }
 }
 
