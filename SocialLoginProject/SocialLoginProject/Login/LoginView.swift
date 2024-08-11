@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    //@State private var isShowingLoginSheet = false
+    @State private var isShowingLoginSheet = false
     var body: some View {
         
         VStack {
@@ -33,7 +33,7 @@ struct LoginView: View {
             
             Button {
                 print("eee")
-                //isShowingLoginSheet.toggle()
+                isShowingLoginSheet.toggle()
             } label: {
                 Text("Log in")
                     .fontWeight(.semibold)
@@ -51,10 +51,10 @@ struct LoginView: View {
             
             Spacer()
         }
-//        .sheet(isPresented: $isShowingLoginSheet) {
-//            LoginSheetView(isShowing: $isShowingLoginSheet)
-//                .presentationDetents([.medium, .large])
-//        }
+        .sheet(isPresented: $isShowingLoginSheet) {
+            LoginSheetView(isShowing: $isShowingLoginSheet)
+                .presentationDetents([.medium, .large])
+        }
     }
 }
 

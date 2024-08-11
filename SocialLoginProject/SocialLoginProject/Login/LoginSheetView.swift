@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LoginSheetView: View {
-    //@Binding var isShowing: Bool
+    @Binding var isShowing: Bool
 
     var body: some View {
         NavigationView {
@@ -58,8 +58,16 @@ struct LoginSheetView: View {
                 } label: {
                     Text("Log in")
                 }
-                
-                
+                             
+                VStack {
+                    Image("kakao_login")
+                        .resizable()
+                        .interpolation(.high)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 360, height: 48)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                }
+                .frame(maxWidth: .infinity)
 
                 Spacer()
             }
@@ -67,7 +75,7 @@ struct LoginSheetView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
                         print("test")
-                        //isShowing = false
+                        isShowing = false
                     }) {
                         Image(systemName: "xmark")
                             .font(.system(size: 15))
@@ -79,8 +87,8 @@ struct LoginSheetView: View {
     }
 }
 
-struct LoginSheetView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginSheetView()
-    }
-}
+//struct LoginSheetView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginSheetView()
+//    }
+//}
