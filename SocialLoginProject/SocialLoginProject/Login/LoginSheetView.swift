@@ -8,30 +8,38 @@
 import SwiftUI
 
 struct LoginSheetView: View {
-    @Binding var isShowing: Bool
-    @State private var email: String = ""
-    @State private var password: String = ""
+    //@Binding var isShowing: Bool
 
     var body: some View {
         NavigationView {
-            VStack(spacing: 20) {
-                Text("LoginSheetView")
+            VStack() {
+                Spacer()
+                
+                Text("아이디")
+                    .font(.system(size: 15))
+                    .foregroundColor(.gray)
+                    .padding(.horizontal)
 
                 Spacer()
             }
-            .padding()
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
-                        isShowing = false
+                        print("test")
+                      //  isShowing = false
                     }) {
                         Image(systemName: "xmark")
-                            .font(.title3)
+                            .font(.system(size: 15))
                             .foregroundColor(.gray)
                     }
                 }
             }
         }
-        .frame(height: 400)
+    }
+}
+
+struct LoginSheetView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginSheetView()
     }
 }

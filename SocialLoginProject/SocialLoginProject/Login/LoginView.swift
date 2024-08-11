@@ -8,20 +8,34 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var isShowingLoginSheet = false
+    //@State private var isShowingLoginSheet = false
     var body: some View {
         
         VStack {
             
             Spacer()
             
+            Image("instagramLogo2")
+                .resizable()
+                .frame(width: 200, height: 57)
+                .padding(.bottom, 10)
+            
+            Image("profile_penguin")
+                .resizable()
+                .frame(width: 100, height: 90)
+                .clipShape(Circle())
+                .shadow(radius: 5)
+                .foregroundColor(Color.gray)
+                .padding(.bottom, 10)
+              
             Text("로그인이 필요해요.")
                 .font(.system(size: 15))
             
             Button {
-                isShowingLoginSheet.toggle()
+                print("eee")
+                //isShowingLoginSheet.toggle()
             } label: {
-                Text("로그인하기")
+                Text("Log in")
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                     .frame(width: 363, height: 42)
@@ -29,12 +43,18 @@ struct LoginView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             
+            NavigationLink(destination: SwitchAccountView()) {
+                        Text("Switch accounts")
+                            .foregroundColor(.blue)
+                            .padding(.top, 5)
+            }
+            
             Spacer()
         }
-        .sheet(isPresented: $isShowingLoginSheet) {
-            LoginSheetView(isShowing: $isShowingLoginSheet)
-                .presentationDetents([.medium, .large]) 
-        }
+//        .sheet(isPresented: $isShowingLoginSheet) {
+//            LoginSheetView(isShowing: $isShowingLoginSheet)
+//                .presentationDetents([.medium, .large])
+//        }
         
     }
 }

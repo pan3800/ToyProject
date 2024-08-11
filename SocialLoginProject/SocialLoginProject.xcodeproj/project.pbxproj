@@ -23,6 +23,7 @@
 		197FAC9F2C64BFAF0001B7F6 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 197FAC9E2C64BFAF0001B7F6 /* FirebaseFirestoreSwift */; };
 		197FACA12C64BFAF0001B7F6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 197FACA02C64BFAF0001B7F6 /* FirebaseStorage */; };
 		19B1A6992C65EC3000B6804C /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B1A6982C65EC3000B6804C /* SplashView.swift */; };
+		19BBD6502C687A5B00B3554E /* SwitchAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BBD64F2C687A5B00B3554E /* SwitchAccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		197FAC892C64BD1A0001B7F6 /* SocialLoginProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		197FAC962C64BE200001B7F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		19B1A6982C65EC3000B6804C /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		19BBD64F2C687A5B00B3554E /* SwitchAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchAccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		197FAC6B2C64BD190001B7F6 /* SocialLoginProject */ = {
 			isa = PBXGroup;
 			children = (
+				19BBD64E2C687A4000B3554E /* LinkButton */,
 				19788FE62C65EF4E00B7A634 /* Common */,
 				19788FE32C65ED9200B7A634 /* Login */,
 				19B1A6972C65EC0600B6804C /* SplashScreen */,
@@ -172,6 +175,14 @@
 				19B1A6982C65EC3000B6804C /* SplashView.swift */,
 			);
 			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		19BBD64E2C687A4000B3554E /* LinkButton */ = {
+			isa = PBXGroup;
+			children = (
+				19BBD64F2C687A5B00B3554E /* SwitchAccountView.swift */,
+			);
+			path = LinkButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19BBD6502C687A5B00B3554E /* SwitchAccountView.swift in Sources */,
 				19788FE82C65EF6E00B7A634 /* BlueButtonView.swift in Sources */,
 				197FAC6F2C64BD190001B7F6 /* ContentView.swift in Sources */,
 				19788FEA2C65F61500B7A634 /* LoginSheetView.swift in Sources */,
