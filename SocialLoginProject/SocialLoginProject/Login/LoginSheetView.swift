@@ -15,10 +15,51 @@ struct LoginSheetView: View {
             VStack() {
                 Spacer()
                 
-                Text("아이디")
-                    .font(.system(size: 15))
-                    .foregroundColor(.gray)
-                    .padding(.horizontal)
+                Image("instagramLogo2")
+                    .resizable()
+                    .frame(width: 200, height: 57)
+                    .padding(.bottom, 10)
+                
+                VStack (spacing: 10) {
+                    TextField("이메일 주소", text: .constant(""))
+                        .textInputAutocapitalization(.never)
+                        .padding(12)
+                        .background(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.gray, lineWidth: 1)
+                        }
+                        .padding(.horizontal)
+                    
+                    SecureField("비밀번호", text: .constant(""))
+                        .textInputAutocapitalization(.never)
+                        .padding(12)
+                        .background(.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(.gray, lineWidth: 1)
+                        }
+                        .padding(.horizontal)
+                }
+                
+                HStack {
+                    Spacer()
+                    Text("Forgot password?")
+                        .foregroundColor(.blue)
+                        .padding(.trailing, 20)
+                        .padding(.top, 5)
+                        .padding(.bottom, 20)
+                }
+                
+                BlueButtonView {
+                    print("로그인 버튼 클릭")
+                } label: {
+                    Text("Log in")
+                }
+                
+                
 
                 Spacer()
             }
@@ -26,7 +67,7 @@ struct LoginSheetView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
                         print("test")
-                      //  isShowing = false
+                        //isShowing = false
                     }) {
                         Image(systemName: "xmark")
                             .font(.system(size: 15))
