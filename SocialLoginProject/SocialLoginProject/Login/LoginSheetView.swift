@@ -62,6 +62,7 @@ struct LoginSheetView: View {
                 VStack {
                     Image("kakao_login")
                         .resizable()
+                        //.edgesIgnoringSafeArea(.all)
                         .interpolation(.high)
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 360, height: 48)
