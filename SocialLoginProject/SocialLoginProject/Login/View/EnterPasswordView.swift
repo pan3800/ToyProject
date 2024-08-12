@@ -1,5 +1,5 @@
 //
-//  EnterEmailView.swift
+//  EnterPasswordView.swift
 //  SocialLoginProject
 //
 //  Created by 임채성 on 2024/08/12.
@@ -7,33 +7,28 @@
 
 import SwiftUI
 
-struct EnterEmailView: View {
+struct EnterPasswordView: View {
     var body: some View {
-
         SignupBackgroundView {
-            
-            VStack () {
-            
-                Text("이메일 주소 입력")
+            VStack() {
+                Text("비밀번호 만들기")
                     .font(.title)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                     .padding(.bottom, 5)
                 
-                Text("회원님에게 연락할 수 있는 이메일 주소를 입력하세요. 이 이메일 주소는 프로필에서 다른 사람에게 공개되지 않습니다.")
+                Text("다른 사람이 추측할 수 없는 6자 이상의 문자 또는 숫자로 비밀번호를 만드세요.")
                     .font(.callout)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                     .padding(.bottom, 10)
                 
-                TextField("이메일주소", text: .constant(""))
+                SecureField("비밀번호", text: .constant(""))
                     .modifier(InstagramTextFieldModifier())
-
                 
                 NavigationLink {
-                    EnterNameView()
-                   // print("EnterNameView()")
+                    EnterUsernameView()
                 } label: {
                     Text("다음")
                         .foregroundStyle(.white)
@@ -48,8 +43,8 @@ struct EnterEmailView: View {
     }
 }
 
-struct EnterEmailView_Previews: PreviewProvider {
+struct EnterPasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        EnterEmailView()
+        EnterPasswordView()
     }
 }
