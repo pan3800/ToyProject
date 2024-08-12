@@ -53,7 +53,8 @@ struct LoginView: View {
         }
         .sheet(isPresented: $isShowingLoginSheet) {
             LoginSheetView(isShowing: $isShowingLoginSheet)
-                .presentationDetents([.medium, .large])
+                .presentationDetents([.fraction(0.9), .large])
+                //.presentationDetents([.medium, .large])
         }
     }
 }

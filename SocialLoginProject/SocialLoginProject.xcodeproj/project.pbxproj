@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		196C035D2C69BBEF00E3B6D0 /* EnterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C035C2C69BBEF00E3B6D0 /* EnterEmailView.swift */; };
 		19788FE52C65ED9F00B7A634 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19788FE42C65ED9F00B7A634 /* LoginView.swift */; };
 		19788FE82C65EF6E00B7A634 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19788FE72C65EF6E00B7A634 /* BlueButtonView.swift */; };
 		19788FEA2C65F61500B7A634 /* LoginSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19788FE92C65F61500B7A634 /* LoginSheetView.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		196C035C2C69BBEF00E3B6D0 /* EnterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailView.swift; sourceTree = "<group>"; };
 		19788FE42C65ED9F00B7A634 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		19788FE72C65EF6E00B7A634 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
 		19788FE92C65F61500B7A634 /* LoginSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSheetView.swift; sourceTree = "<group>"; };
@@ -93,11 +95,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		196C035A2C69BBBA00E3B6D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19788FE92C65F61500B7A634 /* LoginSheetView.swift */,
+				19788FE42C65ED9F00B7A634 /* LoginView.swift */,
+				196C035C2C69BBEF00E3B6D0 /* EnterEmailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		196C035B2C69BBC000E3B6D0 /* ViewGroup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewGroup;
+			sourceTree = "<group>";
+		};
 		19788FE32C65ED9200B7A634 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				19788FE42C65ED9F00B7A634 /* LoginView.swift */,
-				19788FE92C65F61500B7A634 /* LoginSheetView.swift */,
+				196C035B2C69BBC000E3B6D0 /* ViewGroup */,
+				196C035A2C69BBBA00E3B6D0 /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -335,6 +354,7 @@
 				19788FEA2C65F61500B7A634 /* LoginSheetView.swift in Sources */,
 				197FAC6D2C64BD190001B7F6 /* SocialLoginProjectApp.swift in Sources */,
 				19788FE52C65ED9F00B7A634 /* LoginView.swift in Sources */,
+				196C035D2C69BBEF00E3B6D0 /* EnterEmailView.swift in Sources */,
 				19B1A6992C65EC3000B6804C /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

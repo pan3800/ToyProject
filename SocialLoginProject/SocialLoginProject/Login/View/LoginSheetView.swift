@@ -62,13 +62,21 @@ struct LoginSheetView: View {
                 VStack {
                     Image("kakao_login")
                         .resizable()
-                        //.edgesIgnoringSafeArea(.all)
                         .interpolation(.high)
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 360, height: 48)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
                 .frame(maxWidth: .infinity)
+                
+                HStack {
+                    Text("Don't have an account?")
+                    NavigationLink(destination: EnterEmailView()) {
+                        Text("Sign up")
+                            .foregroundColor(.blue)
+                    }
+                }
+                .padding(.top, 5)
 
                 Spacer()
             }
