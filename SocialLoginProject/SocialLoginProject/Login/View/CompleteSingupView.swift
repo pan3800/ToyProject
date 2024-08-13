@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CompleteSingupView: View {
     @Environment(\.dismiss) var dismiss
+    @EnvironmentObject var signupViewModel: SignupViewModel
+    
     var body: some View {
         ZStack {
             VStack {
@@ -30,7 +32,7 @@ struct CompleteSingupView: View {
                             .frame(width: 185, height: 185)
                     }
                 
-                Text("오렌지님, Instagram에 오신 것을 환영합니다.")
+                Text("\(signupViewModel.username)님, Instagram에 오신 것을 환영합니다.")
                     .font(.title)
                     .padding(.top, 30)
                     .padding(.horizontal)
@@ -38,7 +40,9 @@ struct CompleteSingupView: View {
                 Spacer()
                 
                 BlueButtonView {
-                    
+                    Task {
+                        await signupViewModel.createUser()
+                    }
                 } label: {
                     Text("완료")
                 }
@@ -60,5 +64,6 @@ struct CompleteSingupView: View {
 struct CompleteSingupView_Previews: PreviewProvider {
     static var previews: some View {
         CompleteSingupView()
+            .environmentObject(SignupViewModel())
     }
 }

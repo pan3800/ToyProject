@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EnterNameView: View {
+    @EnvironmentObject var signupViewModel: SignupViewModel
     var body: some View {
         SignupBackgroundView {
             VStack () {
@@ -18,11 +19,12 @@ struct EnterNameView: View {
                     .padding(.horizontal)
                     .padding(.bottom, 5)
                 
-                TextField("이름 입력", text: .constant(""))
+                TextField("이름 입력", text: $signupViewModel.name)
                     .modifier(InstagramTextFieldModifier())
                 
                 NavigationLink {
                     EnterPasswordView()
+                        .environmentObject(signupViewModel)
                 } label: {
                     Text("다음")
                         .foregroundStyle(.white)
@@ -40,5 +42,6 @@ struct EnterNameView: View {
 struct EnterNameView_Previews: PreviewProvider {
     static var previews: some View {
         EnterNameView()
+            .environmentObject(SignupViewModel())
     }
 }

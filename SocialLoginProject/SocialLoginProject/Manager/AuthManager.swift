@@ -15,14 +15,7 @@ class AuthManager: ObservableObject {
     
     @Published var currentAuthUser: FirebaseAuth.User?
     @Published var currentUser: User?
-    
-//    init() {
-//        currentAuthUser = Auth.auth().currentUser
-//        Task {
-//            await loadUserData()
-//        }
-//    }
-    
+        
     func createUser(email: String, password: String, name: String, username: String) async {
         print("email:", email)
         print("password:", password)
@@ -31,10 +24,7 @@ class AuthManager: ObservableObject {
         
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
-            print("result:", result)
-//            currentAuthUser = result.user
-//            guard let userId = currentAuthUser?.uid else { return }
-//            await uploadUserData(userId: userId, email: email, username: username, name: name)
+            print("데이터 저장:", result)
         } catch {
             print("DEBUG: Faild to create user with error \(error.localizedDescription)")
         }

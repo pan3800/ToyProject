@@ -71,7 +71,10 @@ struct LoginSheetView: View {
                 
                 HStack {
                     Text("Don't have an account?")
-                    NavigationLink(destination: EnterEmailView()) {
+                    NavigationLink {
+                        EnterEmailView().environmentObject(SignupViewModel())
+                        
+                    } label: {
                         Text("Sign up")
                             .foregroundColor(.blue)
                     }
@@ -96,8 +99,3 @@ struct LoginSheetView: View {
     }
 }
 
-//struct LoginSheetView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LoginSheetView()
-//    }
-//}

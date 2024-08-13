@@ -8,22 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isLaunching = false
+    @StateObject var signupViewModel = SignupViewModel()
+    @StateObject var authManager = AuthManager.shared
+    //@State var isLaunching = false
+    
     var body: some View {
-        VStack {
-            if isLaunching {
-                LoginView()
+        if authManager.currentAuthUser != nil {
+                   MainTabView()
             } else {
-                SplashView()
+                LoginView()
+                    //.environmentObject(signupViewModel)
             }
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                withAnimation {
-                    isLaunching = true
-                }
-            }
-        }
+        
+//        VStack {
+//            if isLaunching {
+//                LoginView()
+//                    .environmentObject(signupViewModel)
+//            } else {
+//                SplashView()
+//            }
+//        }
+//        .onAppear {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+//                withAnimation {
+//                    isLaunching = true
+//                }
+//            }
+//        }
     }
 }
 
