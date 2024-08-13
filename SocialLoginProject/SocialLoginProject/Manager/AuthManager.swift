@@ -23,6 +23,7 @@ class AuthManager: ObservableObject {
         print("username:", username)
         
         do {
+            print("데이터 저장전")
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             print("데이터 저장:", result)
         } catch {

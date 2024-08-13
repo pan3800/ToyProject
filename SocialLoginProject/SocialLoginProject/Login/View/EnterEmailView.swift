@@ -28,7 +28,7 @@ struct EnterEmailView: View {
                     .padding(.horizontal)
                     .padding(.bottom, 10)
             
-                TextField("이메일 주소", text: .constant(""))
+                TextField("이메일 주소", text: $signupViewModel.email)
                     .modifier(InstagramTextFieldModifier())
 
                 
