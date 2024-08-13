@@ -14,6 +14,9 @@
 		196C035D2C69BBEF00E3B6D0 /* EnterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C035C2C69BBEF00E3B6D0 /* EnterEmailView.swift */; };
 		196C035F2C69C53900E3B6D0 /* SignupBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C035E2C69C53900E3B6D0 /* SignupBackgroundView.swift */; };
 		196C03612C69C7B100E3B6D0 /* InstagramTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C03602C69C7B100E3B6D0 /* InstagramTextFieldModifier.swift */; };
+		196C3D412C6B114F00302EF1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C3D402C6B114F00302EF1 /* User.swift */; };
+		196C3D432C6B154C00302EF1 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C3D422C6B154C00302EF1 /* SignupViewModel.swift */; };
+		196C3D462C6B15D200302EF1 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196C3D452C6B15D200302EF1 /* AuthManager.swift */; };
 		19788FE52C65ED9F00B7A634 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19788FE42C65ED9F00B7A634 /* LoginView.swift */; };
 		19788FE82C65EF6E00B7A634 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19788FE72C65EF6E00B7A634 /* BlueButtonView.swift */; };
 		19788FEA2C65F61500B7A634 /* LoginSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19788FE92C65F61500B7A634 /* LoginSheetView.swift */; };
@@ -59,6 +62,9 @@
 		196C035C2C69BBEF00E3B6D0 /* EnterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailView.swift; sourceTree = "<group>"; };
 		196C035E2C69C53900E3B6D0 /* SignupBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupBackgroundView.swift; sourceTree = "<group>"; };
 		196C03602C69C7B100E3B6D0 /* InstagramTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramTextFieldModifier.swift; sourceTree = "<group>"; };
+		196C3D402C6B114F00302EF1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		196C3D422C6B154C00302EF1 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		196C3D452C6B15D200302EF1 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		19788FE42C65ED9F00B7A634 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		19788FE72C65EF6E00B7A634 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
 		19788FE92C65F61500B7A634 /* LoginSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSheetView.swift; sourceTree = "<group>"; };
@@ -121,17 +127,34 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		196C035B2C69BBC000E3B6D0 /* ViewGroup */ = {
+		196C035B2C69BBC000E3B6D0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				196C3D422C6B154C00302EF1 /* SignupViewModel.swift */,
 			);
-			path = ViewGroup;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		196C3D3F2C6B110900302EF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				196C3D402C6B114F00302EF1 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		196C3D442C6B15AC00302EF1 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				196C3D452C6B15D200302EF1 /* AuthManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		19788FE32C65ED9200B7A634 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				196C035B2C69BBC000E3B6D0 /* ViewGroup */,
+				196C035B2C69BBC000E3B6D0 /* ViewModel */,
 				196C035A2C69BBBA00E3B6D0 /* View */,
 			);
 			path = Login;
@@ -170,10 +193,12 @@
 		197FAC6B2C64BD190001B7F6 /* SocialLoginProject */ = {
 			isa = PBXGroup;
 			children = (
+				196C3D442C6B15AC00302EF1 /* Manager */,
 				19BBD64E2C687A4000B3554E /* LinkButton */,
 				19788FE62C65EF4E00B7A634 /* Common */,
 				19788FE32C65ED9200B7A634 /* Login */,
 				19B1A6972C65EC0600B6804C /* SplashScreen */,
+				196C3D3F2C6B110900302EF1 /* Model */,
 				197FAC6C2C64BD190001B7F6 /* SocialLoginProjectApp.swift */,
 				197FAC6E2C64BD190001B7F6 /* ContentView.swift */,
 				19BBD6512C688F5700B3554E /* MainTabView.swift */,
@@ -365,10 +390,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				196C3D432C6B154C00302EF1 /* SignupViewModel.swift in Sources */,
+				196C3D462C6B15D200302EF1 /* AuthManager.swift in Sources */,
 				19BBD6502C687A5B00B3554E /* SwitchAccountView.swift in Sources */,
 				191391E22C69E3880068F951 /* EnterUsernameView.swift in Sources */,
 				19788FE82C65EF6E00B7A634 /* BlueButtonView.swift in Sources */,
 				197FAC6F2C64BD190001B7F6 /* ContentView.swift in Sources */,
+				196C3D412C6B114F00302EF1 /* User.swift in Sources */,
 				19BBD6522C688F5700B3554E /* MainTabView.swift in Sources */,
 				191391DE2C69E0AB0068F951 /* EnterNameView.swift in Sources */,
 				196C035F2C69C53900E3B6D0 /* SignupBackgroundView.swift in Sources */,

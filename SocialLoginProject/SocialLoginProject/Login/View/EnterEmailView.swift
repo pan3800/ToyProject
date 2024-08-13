@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct EnterEmailView: View {
-    var body: some View {
 
+    var body: some View {
         SignupBackgroundView {
             
             VStack () {
