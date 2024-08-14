@@ -29,6 +29,7 @@ struct MainTabView: View {
             VStack {
                 Text("Profile")
                 Button {
+                    AuthManager.shared.signOut()
                 } label: {
                     Text("로그아웃")
                 }

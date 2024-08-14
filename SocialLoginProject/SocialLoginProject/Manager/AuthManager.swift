@@ -16,6 +16,13 @@ class AuthManager: ObservableObject {
     @Published var currentAuthUser: FirebaseAuth.User?
     @Published var currentUser: User?
     
+//    init() {
+//        currentAuthUser = Auth.auth().currentUser
+//        Task {
+//            await loadUserData()
+//        }
+//    }
+    
     func createUser(email: String, password: String, name: String, username: String) async {
         print("email:", email)
         print("password:", password)
@@ -27,6 +34,15 @@ class AuthManager: ObservableObject {
             currentAuthUser = result.user
         } catch {
             print("DEBUG: Faild to create user with error \(error.localizedDescription)")
+        }
+    }
+    
+    func signOut() {
+        do {
+            try Auth.auth().signOut()
+            currentAuthUser = nil
+        } catch {
+            print("DEBUG: Faild to sign out with error \(error.localizedDescription)")
         }
     }
 }
