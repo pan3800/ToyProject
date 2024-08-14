@@ -13,12 +13,12 @@ struct ContentView: View {
     //@State var isLaunching = false
     
     var body: some View {
+        
         if authManager.currentAuthUser != nil {
-                   MainTabView()
-            } else {
-                LoginView()
-                    //.environmentObject(signupViewModel)
-            }
+            MainTabView()
+        } else {
+            LoginView()
+        }
         
 //        VStack {
 //            if isLaunching {
