@@ -17,12 +17,12 @@ class AuthManager: ObservableObject {
     @Published var currentAuthUser: FirebaseAuth.User?
     @Published var currentUser: User?
     
-//    init() {
-//        currentAuthUser = Auth.auth().currentUser
+    init() {
+        currentAuthUser = Auth.auth().currentUser
 //        Task {
 //            await loadUserData()
 //        }
-//    }
+    }
     
     func createUser(email: String, password: String, name: String, username: String) async {
         print("email:", email)
