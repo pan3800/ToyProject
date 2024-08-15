@@ -19,9 +19,9 @@ class AuthManager: ObservableObject {
     
     init() {
         currentAuthUser = Auth.auth().currentUser
-//        Task {
-//            await loadUserData()
-//        }
+        Task {
+            await loadUserData()
+        }
     }
     
     func createUser(email: String, password: String, name: String, username: String) async {
