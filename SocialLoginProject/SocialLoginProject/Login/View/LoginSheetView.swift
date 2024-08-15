@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginSheetView: View {
     @Binding var isShowing: Bool
+    @StateObject var loginViewModel : LoginViewModel
 
     var body: some View {
         NavigationView {
@@ -21,7 +22,7 @@ struct LoginSheetView: View {
                     .padding(.bottom, 10)
                 
                 VStack (spacing: 10) {
-                    TextField("이메일 주소", text: .constant(""))
+                    TextField("이메일 주소", text: $loginViewModel.email)
                         .textInputAutocapitalization(.never)
                         .padding(12)
                         .background(.white)
@@ -32,7 +33,7 @@ struct LoginSheetView: View {
                         }
                         .padding(.horizontal)
                     
-                    SecureField("비밀번호", text: .constant(""))
+                    SecureField("비밀번호", text: $loginViewModel.password)
                         .textInputAutocapitalization(.never)
                         .padding(12)
                         .background(.white)
@@ -54,7 +55,9 @@ struct LoginSheetView: View {
                 }
                 
                 BlueButtonView {
-                    print("로그인 버튼 클릭")
+                    Task {
+                        await loginViewModel.signin()
+                    }
                 } label: {
                     Text("Log in")
                 }

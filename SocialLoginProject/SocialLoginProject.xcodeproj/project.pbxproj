@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1901C2102C6DC46C00E20949 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1901C20F2C6DC46C00E20949 /* LoginViewModel.swift */; };
 		191391DE2C69E0AB0068F951 /* EnterNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191391DD2C69E0AB0068F951 /* EnterNameView.swift */; };
 		191391E02C69E2060068F951 /* EnterPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191391DF2C69E2060068F951 /* EnterPasswordView.swift */; };
 		191391E22C69E3880068F951 /* EnterUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191391E12C69E3880068F951 /* EnterUsernameView.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1901C20F2C6DC46C00E20949 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		191391DD2C69E0AB0068F951 /* EnterNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameView.swift; sourceTree = "<group>"; };
 		191391DF2C69E2060068F951 /* EnterPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPasswordView.swift; sourceTree = "<group>"; };
 		191391E12C69E3880068F951 /* EnterUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterUsernameView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				196C3D422C6B154C00302EF1 /* SignupViewModel.swift */,
+				1901C20F2C6DC46C00E20949 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				19788FE52C65ED9F00B7A634 /* LoginView.swift in Sources */,
 				191391E02C69E2060068F951 /* EnterPasswordView.swift in Sources */,
 				196C035D2C69BBEF00E3B6D0 /* EnterEmailView.swift in Sources */,
+				1901C2102C6DC46C00E20949 /* LoginViewModel.swift in Sources */,
 				19B1A6992C65EC3000B6804C /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

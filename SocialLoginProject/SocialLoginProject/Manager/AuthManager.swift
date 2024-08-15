@@ -51,6 +51,16 @@ class AuthManager: ObservableObject {
         }
     }
     
+    func signIn(email: String, password: String) async {
+        do {
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            currentAuthUser = result.user
+        } catch {
+            print("DEBUG: Faild to log in with error \(error.localizedDescription)")
+        }
+        
+    }
+    
     func signOut() {
         do {
             try Auth.auth().signOut()
