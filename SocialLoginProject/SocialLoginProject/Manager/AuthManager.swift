@@ -55,11 +55,21 @@ class AuthManager: ObservableObject {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             currentAuthUser = result.user
+            await loadUserData()
         } catch {
             print("DEBUG: Faild to log in with error \(error.localizedDescription)")
         }
-        
     }
+    
+    func loadUserData() async {
+         guard let userId = self.currentAuthUser?.uid else { return }
+         do {
+             self.currentUser = try await Firestore.firestore().collection("users").document(userId).getDocument(as: User.self)
+             print("currentUser:", currentUser)
+         } catch {
+             print("DEBUG: Faild to load user data with error \(error.localizedDescription)")
+         }
+     }
     
     func signOut() {
         do {
