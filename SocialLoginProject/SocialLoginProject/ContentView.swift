@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         
-        if authManager.currentAuthUser != nil {
+        if authManager.currentAuthUser != nil || authManager.oauthTokenUser != nil {
             MainTabView()
         } else {
             LoginView()

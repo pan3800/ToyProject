@@ -18,6 +18,7 @@ class AuthManager: ObservableObject {
     
     @Published var currentAuthUser: FirebaseAuth.User?
     @Published var currentUser: User?
+    @Published var oauthTokenUser: OAuthToken?
     
     init() {
         currentAuthUser = Auth.auth().currentUser
@@ -82,20 +83,43 @@ class AuthManager: ObservableObject {
         }
     }
     
-    func handleKakaoLogin() async {
+    func kakaoLogin() async {
         if (UserApi.isKakaoTalkLoginAvailable()) {
-            print("카카오톡 설치 됨")
+            kakaoLonginWithApp()
         } else {
-            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-                if let error = error {
-                    print(error)
-                } else if let oauthToken = oauthToken{
-                    print("토큰 값 확인:", oauthToken)
-                    print("kakao success")
+            kakaoLoginWithAccount()
+        }
+    }
+    
+    func kakaoLoginWithAccount() {
+        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("토큰 값 확인:", oauthToken)
+                print("loginWithKakaoAccount() success.")
                 
-                }
+                //do something
+                self.oauthTokenUser = oauthToken
+                print("로그인 토큰 값:", self.oauthTokenUser)
             }
         }
     }
+    
+    func kakaoLonginWithApp() {
+        UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("loginWithKakaoTalk() success.")
+                
+                //do something
+                _ = oauthToken
+            }
+        }
+    }
+    
 }
 
