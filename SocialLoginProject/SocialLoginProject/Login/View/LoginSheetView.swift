@@ -62,15 +62,29 @@ struct LoginSheetView: View {
                     Text("Log in")
                 }
                              
+//                VStack {
+//                    Image("kakao_login")
+//                        .resizable()
+//                        .interpolation(.high)
+//                        .aspectRatio(contentMode: .fill)
+//                        .frame(width: 360, height: 48)
+//                        .clipShape(RoundedRectangle(cornerRadius: 10))
+//                }
+//                .frame(maxWidth: .infinity)
                 VStack {
-                    Image("kakao_login")
-                        .resizable()
-                        .interpolation(.high)
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 360, height: 48)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                }
-                .frame(maxWidth: .infinity)
+                    Button(action: {
+                        Task {
+                            await loginViewModel.kakaoLogin()
+                        }
+                        
+                    }) {
+                        Text("카카오 로그인")
+                            .padding()
+                            .background(Color.yellow)
+                            .foregroundColor(.black)
+                            .cornerRadius(8)
+                         }
+                     }
                 
                 HStack {
                     Text("Don't have an account?")

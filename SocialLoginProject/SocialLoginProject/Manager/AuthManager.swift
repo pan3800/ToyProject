@@ -9,6 +9,8 @@ import Foundation
 import FirebaseAuth
 import Firebase
 import FirebaseFirestore
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class AuthManager: ObservableObject {
     
@@ -62,14 +64,14 @@ class AuthManager: ObservableObject {
     }
     
     func loadUserData() async {
-         guard let userId = self.currentAuthUser?.uid else { return }
-         do {
-             self.currentUser = try await Firestore.firestore().collection("users").document(userId).getDocument(as: User.self)
-             print("currentUser:", currentUser)
-         } catch {
-             print("DEBUG: Faild to load user data with error \(error.localizedDescription)")
-         }
-     }
+        guard let userId = self.currentAuthUser?.uid else { return }
+        do {
+            self.currentUser = try await Firestore.firestore().collection("users").document(userId).getDocument(as: User.self)
+            print("currentUser:", currentUser)
+        } catch {
+            print("DEBUG: Faild to load user data with error \(error.localizedDescription)")
+        }
+    }
     
     func signOut() {
         do {
@@ -79,4 +81,21 @@ class AuthManager: ObservableObject {
             print("DEBUG: Faild to sign out with error \(error.localizedDescription)")
         }
     }
+    
+    func handleKakaoLogin() async {
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            print("카카오톡 설치 됨")
+        } else {
+            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                } else if let oauthToken = oauthToken{
+                    print("토큰 값 확인:", oauthToken)
+                    print("kakao success")
+                
+                }
+            }
+        }
+    }
 }
+

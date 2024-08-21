@@ -14,4 +14,8 @@ class LoginViewModel : ObservableObject {
     func signin() async {
         await AuthManager.shared.signIn(email: email, password: password)
     }
+    
+    func kakaoLogin() async {
+        await AuthManager.shared.handleKakaoLogin()
+    }
 }
