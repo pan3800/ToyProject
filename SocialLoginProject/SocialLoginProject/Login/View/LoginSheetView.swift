@@ -62,15 +62,6 @@ struct LoginSheetView: View {
                     Text("Log in")
                 }
                              
-//                VStack {
-//                    Image("kakao_login")
-//                        .resizable()
-//                        .interpolation(.high)
-//                        .aspectRatio(contentMode: .fill)
-//                        .frame(width: 360, height: 48)
-//                        .clipShape(RoundedRectangle(cornerRadius: 10))
-//                }
-//                .frame(maxWidth: .infinity)
                 VStack {
                     Button(action: {
                         Task {
@@ -84,7 +75,19 @@ struct LoginSheetView: View {
                             .foregroundColor(.black)
                             .cornerRadius(8)
                          }
+                    
+                    Button(action: {
+                     
+                    }) {
+                        Text("페이스북 로그인")
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .fontWeight(.bold)
+                            .cornerRadius(8)
+                         }
                      }
+                
                 
                 HStack {
                     Text("Don't have an account?")

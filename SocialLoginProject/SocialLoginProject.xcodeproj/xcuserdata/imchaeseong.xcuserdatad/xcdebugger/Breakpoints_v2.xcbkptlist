@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6663AE56-1428-441C-A012-3F537AAF4B59"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24A1829C-5137-4EA5-868B-7640759F320E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SocialLoginProject/Manager/AuthManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "createUser(email:password:name:username:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "24A1829C-5137-4EA5-868B-7640759F320E - be5f54b5a6d6a1cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SocialLoginProject.AuthManager.createUser(email: Swift.String, password: Swift.String, name: Swift.String, username: Swift.String) async -&gt; ()"
+                  moduleName = "SocialLoginProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imchaeseong/Documents/starbucks_ui/SocialLoginProject/SocialLoginProject/Manager/AuthManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "980">
+               </Location>
+               <Location
+                  uuid = "24A1829C-5137-4EA5-868B-7640759F320E - 45d74cf0c8197222"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for SocialLoginProject.AuthManager.createUser(email: Swift.String, password: Swift.String, name: Swift.String, username: Swift.String) async -&gt; ()"
+                  moduleName = "SocialLoginProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imchaeseong/Documents/starbucks_ui/SocialLoginProject/SocialLoginProject/Manager/AuthManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "24A1829C-5137-4EA5-868B-7640759F320E - 697cca664b89edce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SocialLoginProject.AuthManager.createUser(email: Swift.String, password: Swift.String, name: Swift.String, username: Swift.String) async -&gt; ()"
+                  moduleName = "SocialLoginProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imchaeseong/Documents/starbucks_ui/SocialLoginProject/SocialLoginProject/Manager/AuthManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "24A1829C-5137-4EA5-868B-7640759F320E - a32d8323c3b78bcb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for SocialLoginProject.AuthManager.createUser(email: Swift.String, password: Swift.String, name: Swift.String, username: Swift.String) async -&gt; ()"
+                  moduleName = "SocialLoginProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imchaeseong/Documents/starbucks_ui/SocialLoginProject/SocialLoginProject/Manager/AuthManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
