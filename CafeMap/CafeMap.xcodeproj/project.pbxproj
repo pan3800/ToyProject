@@ -14,6 +14,8 @@
 		198552B92C7D919E007F2BC2 /* CafeMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198552B82C7D919E007F2BC2 /* CafeMapTests.swift */; };
 		198552C32C7D919E007F2BC2 /* CafeMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198552C22C7D919E007F2BC2 /* CafeMapUITests.swift */; };
 		198552C52C7D919E007F2BC2 /* CafeMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198552C42C7D919E007F2BC2 /* CafeMapUITestsLaunchTests.swift */; };
+		198552D32C7D9267007F2BC2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198552D22C7D9267007F2BC2 /* LoginView.swift */; };
+		198552D72C7D9B0D007F2BC2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198552D62C7D9B0D007F2BC2 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		198552BE2C7D919E007F2BC2 /* CafeMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		198552C22C7D919E007F2BC2 /* CafeMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeMapUITests.swift; sourceTree = "<group>"; };
 		198552C42C7D919E007F2BC2 /* CafeMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		198552D22C7D9267007F2BC2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		198552D62C7D9B0D007F2BC2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		198552A62C7D919D007F2BC2 /* CafeMap */ = {
 			isa = PBXGroup;
 			children = (
+				198552D52C7D9AFE007F2BC2 /* Color */,
+				198552D12C7D9253007F2BC2 /* Login */,
 				198552A72C7D919D007F2BC2 /* CafeMapApp.swift */,
 				198552A92C7D919D007F2BC2 /* ContentView.swift */,
 				198552AB2C7D919E007F2BC2 /* Assets.xcassets */,
@@ -125,6 +131,30 @@
 				198552C42C7D919E007F2BC2 /* CafeMapUITestsLaunchTests.swift */,
 			);
 			path = CafeMapUITests;
+			sourceTree = "<group>";
+		};
+		198552D12C7D9253007F2BC2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				198552D42C7D97C0007F2BC2 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		198552D42C7D97C0007F2BC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				198552D22C7D9267007F2BC2 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		198552D52C7D9AFE007F2BC2 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				198552D62C7D9B0D007F2BC2 /* Color.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198552D32C7D9267007F2BC2 /* LoginView.swift in Sources */,
+				198552D72C7D9B0D007F2BC2 /* Color.swift in Sources */,
 				198552AA2C7D919D007F2BC2 /* ContentView.swift in Sources */,
 				198552A82C7D919D007F2BC2 /* CafeMapApp.swift in Sources */,
 			);
