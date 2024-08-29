@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainTabView: View {
-    @State var tabIndex = 0
+    @State var tabIndex = 2
     
     var body: some View {
         TabView(selection: $tabIndex) {
@@ -25,12 +25,7 @@ struct MainTabView: View {
                 .tag(1)
             
             VStack {
-                Text("Profile")
-                Button {
-                    print("로그아웃")
-                } label: {
-                    Text("로그아웃")
-                }
+                LoginView()
             }
             .tabItem {
                 Image(systemName: "person.fill")

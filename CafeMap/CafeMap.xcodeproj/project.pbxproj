@@ -17,6 +17,7 @@
 		198552D32C7D9267007F2BC2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198552D22C7D9267007F2BC2 /* LoginView.swift */; };
 		198552D72C7D9B0D007F2BC2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198552D62C7D9B0D007F2BC2 /* Color.swift */; };
 		198552D92C7D9C71007F2BC2 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198552D82C7D9C71007F2BC2 /* MainTabView.swift */; };
+		198552DB2C7D9FA8007F2BC2 /* LoginSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198552DA2C7D9FA8007F2BC2 /* LoginSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		198552D22C7D9267007F2BC2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		198552D62C7D9B0D007F2BC2 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		198552D82C7D9C71007F2BC2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		198552DA2C7D9FA8007F2BC2 /* LoginSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +102,7 @@
 		198552A62C7D919D007F2BC2 /* CafeMap */ = {
 			isa = PBXGroup;
 			children = (
-				198552D52C7D9AFE007F2BC2 /* Color */,
+				198552D52C7D9AFE007F2BC2 /* Common */,
 				198552D12C7D9253007F2BC2 /* Login */,
 				198552A72C7D919D007F2BC2 /* CafeMapApp.swift */,
 				198552A92C7D919D007F2BC2 /* ContentView.swift */,
@@ -148,16 +150,17 @@
 			isa = PBXGroup;
 			children = (
 				198552D22C7D9267007F2BC2 /* LoginView.swift */,
+				198552DA2C7D9FA8007F2BC2 /* LoginSheetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		198552D52C7D9AFE007F2BC2 /* Color */ = {
+		198552D52C7D9AFE007F2BC2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				198552D62C7D9B0D007F2BC2 /* Color.swift */,
 			);
-			path = Color;
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +295,7 @@
 			files = (
 				198552D32C7D9267007F2BC2 /* LoginView.swift in Sources */,
 				198552D72C7D9B0D007F2BC2 /* Color.swift in Sources */,
+				198552DB2C7D9FA8007F2BC2 /* LoginSheetView.swift in Sources */,
 				198552AA2C7D919D007F2BC2 /* ContentView.swift in Sources */,
 				198552A82C7D919D007F2BC2 /* CafeMapApp.swift in Sources */,
 				198552D92C7D9C71007F2BC2 /* MainTabView.swift in Sources */,
