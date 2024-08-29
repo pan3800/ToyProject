@@ -11,6 +11,7 @@ struct LoginSheetView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isPasswordVisible: Bool = false
+    @Binding var isShowing: Bool
     
     var body: some View {
         
@@ -93,7 +94,7 @@ struct LoginSheetView: View {
                         Spacer()
                         
                     }
-                    .padding(.top, 20)
+                    .padding(.top, 35)
                     
                     HStack {
                         Spacer()
@@ -116,16 +117,28 @@ struct LoginSheetView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
                     .padding(.bottom, 30)
-    
+                    
                 }
                 .padding(.horizontal)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        print("test")
+                        isShowing = false
+                    }) {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 15))
+                            .foregroundColor(.gray)
+                    }
+                }
             }
         }
     }
 }
 
-struct LoginSheetView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginSheetView()
-    }
-}
+//struct LoginSheetView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginSheetView()
+//    }
+//}
