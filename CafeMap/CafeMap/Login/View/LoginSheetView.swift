@@ -95,6 +95,14 @@ struct LoginSheetView: View {
                     }
                     .padding(.top, 20)
                     
+                    HStack {
+                        Spacer()
+                        Text("이메일로 회원가입하기")
+                            .foregroundStyle(Color.black)
+                        Spacer()
+                    }
+                    .padding(.top, 10)
+                    
                     Spacer()
                     
                     Button {
