@@ -98,11 +98,17 @@ struct LoginSheetView: View {
                     
                     HStack {
                         Spacer()
-                        Text("이메일로 회원가입하기")
-                            .foregroundStyle(Color.black)
+                        NavigationLink {
+                            TermsAndConditionsView()
+                        } label: {
+                            Text("이메일로 회원가입하기")
+                                .underline()
+                                .foregroundColor(.black)
+                        }
                         Spacer()
                     }
                     .padding(.top, 10)
+
                     
                     Spacer()
                     
