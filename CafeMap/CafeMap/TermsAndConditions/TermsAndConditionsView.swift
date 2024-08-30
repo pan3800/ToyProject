@@ -11,7 +11,7 @@ struct TermsAndConditionsView: View {
     @State private var isAgreed = false
     
     var body: some View {
-        VStack {
+        SignupBackgroundView {
             Text("TermsAndConditionsView")
         }
     }
