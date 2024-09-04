@@ -95,21 +95,7 @@ struct LoginSheetView: View {
                         
                     }
                     .padding(.top, 35)
-                    
-                    HStack {
-                        Spacer()
-                        NavigationLink {
-                            TermsAndConditionsView()
-                        } label: {
-                            Text("이메일로 회원가입하기")
-                                .underline()
-                                .foregroundColor(.black)
-                        }
-                        Spacer()
-                    }
-                    .padding(.top, 10)
-
-                    
+                
                     Spacer()
                     
                     Button {
