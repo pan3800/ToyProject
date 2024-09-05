@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190365C62C89677D00167E52 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190365C52C89677D00167E52 /* AuthManager.swift */; };
+		190365C82C8967E200167E52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190365C72C8967E200167E52 /* LoginViewModel.swift */; };
 		191CFD6B2C883BD800832480 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 191CFD6A2C883BD800832480 /* KakaoSDKAuth */; };
 		191CFD6D2C883BD800832480 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 191CFD6C2C883BD800832480 /* KakaoSDKCommon */; };
 		191CFD6F2C883BD800832480 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 191CFD6E2C883BD800832480 /* KakaoSDKUser */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		190365C52C89677D00167E52 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		190365C72C8967E200167E52 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		191CFD702C883C1500832480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		194B75682C81880300C2D526 /* SignupBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupBackgroundView.swift; sourceTree = "<group>"; };
 		196203882C86E2060032C0BC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -90,9 +94,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		190365C42C89676300167E52 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				190365C52C89677D00167E52 /* AuthManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		19539D882C8046A300E792B5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				190365C72C8967E200167E52 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -147,6 +160,7 @@
 				191CFD702C883C1500832480 /* Info.plist */,
 				196203852C86E1D20032C0BC /* Profile */,
 				198552D52C7D9AFE007F2BC2 /* Common */,
+				190365C42C89676300167E52 /* Manager */,
 				198552D12C7D9253007F2BC2 /* Login */,
 				198552A72C7D919D007F2BC2 /* CafeMapApp.swift */,
 				198552A92C7D919D007F2BC2 /* ContentView.swift */,
@@ -348,12 +362,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				198552D32C7D9267007F2BC2 /* LoginView.swift in Sources */,
+				190365C62C89677D00167E52 /* AuthManager.swift in Sources */,
 				196203892C86E2060032C0BC /* ProfileView.swift in Sources */,
 				198552D72C7D9B0D007F2BC2 /* Color.swift in Sources */,
 				198552DB2C7D9FA8007F2BC2 /* LoginSheetView.swift in Sources */,
 				198552AA2C7D919D007F2BC2 /* ContentView.swift in Sources */,
 				198552A82C7D919D007F2BC2 /* CafeMapApp.swift in Sources */,
 				194B75692C81880300C2D526 /* SignupBackgroundView.swift in Sources */,
+				190365C82C8967E200167E52 /* LoginViewModel.swift in Sources */,
 				198552D92C7D9C71007F2BC2 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

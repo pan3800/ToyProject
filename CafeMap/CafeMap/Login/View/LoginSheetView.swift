@@ -12,6 +12,7 @@ struct LoginSheetView: View {
     @State private var password: String = ""
     @State private var isPasswordVisible: Bool = false
     @Binding var isShowing: Bool
+    @StateObject var loginViewModel: LoginViewModel
     
     var body: some View {
         
@@ -76,10 +77,17 @@ struct LoginSheetView: View {
                     
                     HStack {
                         Spacer()
-                        Image("kakao_talk_btn_icon")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50, height: 50)
+                        Button {
+                            Task {
+                                await loginViewModel.kakaoLogin()
+                            }
+                        } label: {
+                            Image("kakao_talk_btn_icon")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 50, height: 50)
+                        }
+        
                         
                         Image("naver_btnG_icon")
                             .resizable()
