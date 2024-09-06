@@ -11,18 +11,18 @@ import KakaoSDKUser
 
 class AuthManager: ObservableObject {
     
-    static let shared = AuthManager()
+    @Published var oauthTokenUser: OAuthToken?
     
+    static let shared = AuthManager()
+ 
     init() {
         
     }
     
     func kakaoLogin() async {
         if (UserApi.isKakaoTalkLoginAvailable()) {
-            print("카카오톡 로그인 가능")
             kakaoLonginWithApp()
         } else {
-            print("카카오톡 로그인 불가능")
             kakaoLoginWithAccount()
         }
     }
@@ -43,11 +43,13 @@ class AuthManager: ObservableObject {
     func kakaoLoginWithAccount() {
         UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
             if let error = error {
-                print(error)
+                print("로그인 에러: \(error.localizedDescription)")
             }
             else {
                 print("토큰 값 확인:", oauthToken)
+              
                 print("loginWithKakaoAccount() success.")
+                self.oauthTokenUser = oauthToken
             }
         }
     }

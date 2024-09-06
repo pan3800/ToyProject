@@ -164,9 +164,9 @@
 				198552D12C7D9253007F2BC2 /* Login */,
 				198552A72C7D919D007F2BC2 /* CafeMapApp.swift */,
 				198552A92C7D919D007F2BC2 /* ContentView.swift */,
+				198552D82C7D9C71007F2BC2 /* MainTabView.swift */,
 				198552AB2C7D919E007F2BC2 /* Assets.xcassets */,
 				198552AD2C7D919E007F2BC2 /* Preview Content */,
-				198552D82C7D9C71007F2BC2 /* MainTabView.swift */,
 			);
 			path = CafeMap;
 			sourceTree = "<group>";
