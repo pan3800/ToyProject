@@ -8,16 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @StateObject var authManager = AuthManager.shared
-    
+
     var body: some View {
-        if authManager.oauthTokenUser != nil {
-            //MainTabView()
-            ProfileView()
-        } else {
-            MainTabView()
-        }
+        MainTabView()
     }
 }
 

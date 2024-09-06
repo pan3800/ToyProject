@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainTabView: View {
     @State var tabIndex = 2
+    @StateObject var authManager = AuthManager.shared
     
     var body: some View {
         TabView(selection: $tabIndex) {
@@ -25,7 +26,11 @@ struct MainTabView: View {
                 .tag(1)
             
             VStack {
-                LoginView()
+                if authManager.oauthTokenUser != nil {
+                    ProfileView()
+                } else {
+                    LoginView()
+                }
             }
             .tabItem {
                 Image(systemName: "person.fill")
