@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    
     var body: some View {
-        Text("ProfileView")
+        VStack {
+            Text("ProfileView")
+            
+            Button {
+                AuthManager.shared.kakaoLogout()
+            } label: {
+                Text("로그아웃")
+            }
+        }
     }
 }
 
