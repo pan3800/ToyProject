@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
+import KakaoSDKAuth
 
 struct MainTabView: View {
     @State var tabIndex = 2
     @StateObject var authManager = AuthManager.shared
-    
+   
     var body: some View {
         TabView(selection: $tabIndex) {
             Text("Home")
@@ -26,7 +27,7 @@ struct MainTabView: View {
                 .tag(1)
             
             VStack {
-                if authManager.oauthTokenUser != nil {
+                if authManager.oauthToken != nil{
                     ProfileView()
                 } else {
                     LoginView()

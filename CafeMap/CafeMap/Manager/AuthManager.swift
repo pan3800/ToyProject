@@ -11,28 +11,14 @@ import KakaoSDKUser
 
 class AuthManager: ObservableObject {
     
-    @Published var oauthTokenUser: OAuthToken?
+    static let shared = AuthManager()
+    
+    @Published var oauthToken: OAuthToken?
     @Published var currentUser: User?
     
-    static let shared = AuthManager()
- 
     init() {
-        self.oauthTokenUser = TokenManager.manager.getToken()
+        oauthToken = TokenManager.manager.getToken()
     }
-    
-//    func fetchUserInfo() {
-//        UserApi.shared.me { user, error in
-//            if let error = error {
-//                print("사용자 정보 가져오기 에러: \(error.localizedDescription)")
-//            } else {
-//                print("사용자 정보 가져오기 성공")
-//                // 사용자 정보를 가져와서 변수에 저장합니다.
-//                self.currentUser?.name = user?.kakaoAccount?.name ?? ""
-//                self.currentUser?.email = user?.kakaoAccount?.email ?? ""
-//                self.currentUser?.username = user?.kakaoAccount?.profile?.nickname ?? ""
-//            }
-//        }
-//    }
     
     func kakaoLogin() async {
         if (UserApi.isKakaoTalkLoginAvailable()) {
@@ -62,9 +48,9 @@ class AuthManager: ObservableObject {
             }
             else {
                 print("토큰 값 확인:", oauthToken)
-              
                 print("loginWithKakaoAccount() success.")
-                self.oauthTokenUser = oauthToken
+        
+                self.oauthToken = oauthToken
             }
         }
     }
@@ -75,7 +61,7 @@ class AuthManager: ObservableObject {
                 print("로그아웃 에러: \(error.localizedDescription)")
             } else {
                 print("로그아웃 성공")
-                self.oauthTokenUser = nil
+                self.oauthToken = nil
             }
         }
     }
