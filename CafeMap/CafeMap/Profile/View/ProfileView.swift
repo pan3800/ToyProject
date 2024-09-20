@@ -39,10 +39,18 @@ struct ProfileView: View {
                                 Text(nickname)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.horizontal)
+                            } else {
+                                Text("pan5158@naver.com")
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.horizontal)
                             }
                             
                             if let email = viewModel.email {
                                 Text(email)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.horizontal)
+                            } else {
+                                Text("임채무")
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.horizontal)
                             }

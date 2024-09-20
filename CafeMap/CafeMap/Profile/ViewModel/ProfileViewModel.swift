@@ -47,7 +47,6 @@ class ProfileViewModel : ObservableObject{
                 }
             }
         }.resume()
-        
-        
     }
+    
 }
