@@ -17,12 +17,21 @@ struct ProfileView: View {
             ScrollView {
                 VStack (alignment: .leading){
                     HStack {
-                        Image(systemName: "person.circle.fill")
-                            .resizable()
-                            .frame(width: 75, height: 75)
-                            .clipShape(Circle())
-                            .foregroundColor(.gray)
-                            .padding(.bottom, 10)
+                        if let profileImage = viewModel.profileImage {
+                            profileImage
+                                .resizable()
+                                .frame(width: 75, height: 75)
+                                .clipShape(Circle())
+                                .padding(.bottom, 10)
+                        } else {
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .frame(width: 75, height: 75)
+                                .clipShape(Circle())
+                                .foregroundColor(.gray)
+                                .padding(.bottom, 10)
+                        }
+                        
                         
                         VStack (alignment: .leading){
                             
@@ -31,7 +40,7 @@ struct ProfileView: View {
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding(.horizontal)
                             }
-               
+                            
                             if let email = viewModel.email {
                                 Text(email)
                                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -42,9 +51,7 @@ struct ProfileView: View {
                     .padding()
                     .padding(.horizontal)
                     
-                    
                 }
-                
             }
             
             Button {
