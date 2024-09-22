@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		190365C62C89677D00167E52 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190365C52C89677D00167E52 /* AuthManager.swift */; };
 		190365C82C8967E200167E52 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190365C72C8967E200167E52 /* LoginViewModel.swift */; };
+		190FE6FE2C9FE66C0026C18F /* JWTKit in Frameworks */ = {isa = PBXBuildFile; productRef = 190FE6FD2C9FE66C0026C18F /* JWTKit */; };
 		191CFD6B2C883BD800832480 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 191CFD6A2C883BD800832480 /* KakaoSDKAuth */; };
 		191CFD6D2C883BD800832480 /* KakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 191CFD6C2C883BD800832480 /* KakaoSDKCommon */; };
 		191CFD6F2C883BD800832480 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 191CFD6E2C883BD800832480 /* KakaoSDKUser */; };
@@ -76,6 +77,7 @@
 				191CFD6D2C883BD800832480 /* KakaoSDKCommon in Frameworks */,
 				191CFD6B2C883BD800832480 /* KakaoSDKAuth in Frameworks */,
 				191CFD6F2C883BD800832480 /* KakaoSDKUser in Frameworks */,
+				190FE6FE2C9FE66C0026C18F /* JWTKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +256,7 @@
 				191CFD6A2C883BD800832480 /* KakaoSDKAuth */,
 				191CFD6C2C883BD800832480 /* KakaoSDKCommon */,
 				191CFD6E2C883BD800832480 /* KakaoSDKUser */,
+				190FE6FD2C9FE66C0026C18F /* JWTKit */,
 			);
 			productName = CafeMap;
 			productReference = 198552A42C7D919D007F2BC2 /* CafeMap.app */;
@@ -329,6 +332,8 @@
 			mainGroup = 1985529B2C7D919D007F2BC2;
 			packageReferences = (
 				191CFD692C883BD800832480 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				190FE6FC2C9FE66C0026C18F /* XCRemoteSwiftPackageReference "jwt-kit" */,
+				190FE6FF2C9FED290026C18F /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios" */,
 			);
 			productRefGroup = 198552A52C7D919D007F2BC2 /* Products */;
 			projectDirPath = "";
@@ -705,6 +710,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		190FE6FC2C9FE66C0026C18F /* XCRemoteSwiftPackageReference "jwt-kit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/jwt-kit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		190FE6FF2C9FED290026C18F /* XCRemoteSwiftPackageReference "naveridlogin-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/naver/naveridlogin-sdk-ios.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		191CFD692C883BD800832480 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
@@ -716,6 +737,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		190FE6FD2C9FE66C0026C18F /* JWTKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 190FE6FC2C9FE66C0026C18F /* XCRemoteSwiftPackageReference "jwt-kit" */;
+			productName = JWTKit;
+		};
 		191CFD6A2C883BD800832480 /* KakaoSDKAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 191CFD692C883BD800832480 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;

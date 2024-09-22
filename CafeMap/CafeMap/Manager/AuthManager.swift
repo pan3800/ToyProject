@@ -15,8 +15,6 @@ class AuthManager: ObservableObject {
     
     @Published var oauthToken: OAuthToken?
    
-
-
     
     init() {
         oauthToken = TokenManager.manager.getToken()
@@ -52,7 +50,6 @@ class AuthManager: ObservableObject {
                 print("로그인 에러: \(error.localizedDescription)")
             }
             else {
-                print("토큰 값 확인:", oauthToken)
                 print("loginWithKakaoAccount() success.")
             
                 self.oauthToken = oauthToken
@@ -86,4 +83,6 @@ class AuthManager: ObservableObject {
             }
         }
     }
+    
+    
 }
